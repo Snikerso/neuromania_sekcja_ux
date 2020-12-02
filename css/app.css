@@ -4,3 +4,15 @@
 
 /* Zadanie wybierz wszystkie elemnty na stronie */
 /* Usuwamy nie potrzebne defaultowe wlasciwosci */
+
+body {
+  background-color: aqua;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+}
