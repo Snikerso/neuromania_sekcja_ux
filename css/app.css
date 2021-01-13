@@ -1,18 +1,140 @@
-/* Dodanie fontów */
+@font-face {
+  font-family: DosisMedium;
+  src: url(../assets/fonts/Dosis-Medium.ttf);
+}
 
-/* Zadeklaruj zmienne z trzema kolorami */
+:root {
+  --first-color: #19191c;
+  --second-color: #00c4d5;
+  --white-color: #ffffff;
+}
 
-/* Zadanie wybierz wszystkie elemnty na stronie */
-/* Usuwamy nie potrzebne defaultowe wlasciwosci */
+* > * {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 body {
-  background-color: aqua;
+  background-color: var(--first-color);
+}
+#background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#header {
+#aside {
+  position: absolute;
+  background-color: var(--first-color);
+  top: 0px;
+  left: 0px;
+  width: 248px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 4px 36px #013034;
+  padding-top: 35px;
+  font-family: DosisMedium;
 }
 
-.head {
+#aside img {
+  width: 158px;
+  height: 181px;
+}
+
+#aside > div {
+  margin-top: 40px;
+}
+
+#dates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dates > * {
+  margin-top: 25px;
+}
+
+#dates p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--second-color);
+  border-radius: 10px;
+  width: 191px;
+  height: 42px;
+  color: var(--white-color);
+  font-size: 18px;
+}
+#dates p:hover {
+  cursor: pointer;
+  background-color: var(--second-color);
+}
+
+#dates h2 {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+#social-icons svg {
+  width: 60;
+  margin: 10px;
+}
+
+/* zawartosc strony  */
+
+#content {
+  margin-left: 300px;
+}
+
+#header h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: DosisMedium;
+  color: var(--white-color);
+  font-size: 48px;
+}
+
+#nav {
+  display: flex;
+  justify-items: center;
+  border-top: 2px solid var(--second-color);
+  padding: 10px;
+  font-size: 24px;
+}
+#nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+
+#nav div a {
+  /* color: var(--white-color); */
+  text-decoration: none;
+  padding: 10px;
+  opacity: 0.3;
+}
+.active {
+  background: #02bbcc;
+  border: 1.5px solid #00c4d5;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 11px rgba(2, 187, 204, 0.63);
+  border-radius: 5px;
+}
+#main {
+  margin-top: 123px;
+  color: var(--white-color);
+  font-size: 20px;
 }
